@@ -22,12 +22,12 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions to avoid memory leaks
+    // Cancelar la suscripción a todas las suscripciones para evitar pérdidas de memoria
     this.destroy$.next();
     this.destroy$.complete();
   }
 
-  // TODO: add button to refresh users data
+
   public refreshUsersData(): void {
     this.subsGetUsersData();
   }
@@ -37,7 +37,6 @@ export class MainComponent implements OnInit, OnDestroy {
       .getPlatformsUsersData()
       .pipe(
         catchError((error) => {
-          // TODO: Show toast or modal to inform the user about the error
           console.error(error);
           return [];
         }),

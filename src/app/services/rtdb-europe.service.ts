@@ -17,8 +17,8 @@ export class RtdbEuropeService {
   constructor(private readonly http: HttpClient) {}
 
   /**
-   * Get all the platforms from the database
-   * @returns observable with the platform user data
+   * Obtener todas las plataformas de la base de datos.
+   * @returns observables con los datos del usuario de la plataforma
    */
   public getPlatformsUsersData(): Observable<UserData[]> {
     return this.http.get<UserData[]>(

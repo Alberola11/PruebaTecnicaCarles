@@ -54,9 +54,9 @@
                 </tr>
                 </thead>
                 <tbody>
-                <!-- Loading state -->
+                <!-- Estado de carga -->
                 <ng-container *ngIf="!isLoadingUserData; else loadingUserData">
-                  <!-- If data exist loaded, if not show empty table message -->
+                  <!-- Si existen datos cargados, si no, muestra el mensaje de tabla vacía -->
                   <ng-container *ngIf="users.length > 0">
                     <tr *ngFor="let user of users">
                       <td>{{ user.name }}</td>

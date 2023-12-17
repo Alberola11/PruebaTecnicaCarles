@@ -1,4 +1,4 @@
-// TODO: Use style variable instead of raw values. Good practice to have a system design
+
 /* navbar.component.css */
 
 .navbar {
@@ -55,4 +55,8 @@
 /* Establece una anchura específica para la primera columna si es necesario */
 .table-container td:first-child, .table-container th:first-child {
   width: 800px; /* Ajusta según tus necesidades */
+
+}
+.table-container{
+  background: transparent;
 }
