@@ -1,0 +1,90 @@
+<div class="container-fluid">
+  <div class="navbar" >
+    <div>
+      <img src="assets/img.png" alt="Logo" class="logo">
+    </div>
+
+    <div>
+      <span class="brand">Logo</span>
+    </div>
+
+    <div class="links">
+      <a href="#">Home  </a>
+      <a>|</a>
+      <a href="#">About</a>
+      <a>|</a>
+      <a href="#">Pricing</a>
+      <a>|</a>
+      <a href="#">Blog</a>
+    </div>
+  </div>
+
+  <div class="body-content">
+    <div class="">
+      <div class="row">
+        <!-- Espacio izquierdo -->
+        <div class="col-md-2">
+          <div class="left-container">
+
+
+            <p>Est temporibus saiente ex esse illum aut facere sint hic dolorum ipsam et atque perferendis. Est soluta quod eos minus voluptatem eum facere atque aut voluptas fugiat quo excepturi obcaecati. </p>
+            <p>Et vero expedita At nihil expedita ut internos fugit in cupiditate voluptate non aliquam ducimus sit nihil minima. Ut similique possimus eos consectetur nobis quo aspernatur esse 33 ipsum necessitatibus est fuga optio. </p>
+            <p>Lorem ipsum dolor sit amet. Sit galisum adipisci eos molestiae nulla eos odit nihil et adipisci minima est eaque voluptas! Aut similique doloremque ad alias aliquam ut quia voluptatem est nisi quas non quia excepturi! Et sunt accusamus ut totam dolor et distinctio magni eos internos voluptate? Ad voluptas sunt eum possimus quidem est velit enim qui minima reprehenderit vel illum ratione. </p>
+            <p>Aut fugit quibusdam ex accusamus debitis ea dolorum reprehenderit et consectetur harum. Est autem quam sit quod porro sed omnis optio ex voluptatum recusandae! Et impedit molestias et molestiae facere At voluptatem totam ab velit tempora nam fugit magni et necessitatibus ipsam sed expedita magni. </p>
+            <p>Sit pariatur quam non debitis aperiam qui itaque asperiores aut exercitationem rerum et impedit corporis. Ut dignissimos itaque ut possimus sint non iusto commodi qui quae unde qui deleniti perferendis et praesentium veritatis. Et unde dicta 33 provident culpa hic doloribus molestiae qui sint sint 33 optio galisum. </p>
+            <p>Lorem ipsum dolor sit amet. Qui recusandae officia non velit dicta aut ratione dolorem ut omnis rerum est officiis ipsum est earum possimus. Eos rerum Quis qui harum vero et perferendis ratione eos recusandae eligendi ad minus nihil quo Quis quas aut porro necessitatibus. Qui nisi nihil nam nostrum iure et dolor vero. </p>
+            <p>Aut omnis recusandae et galisum exercitationem ut sunt illo id ducimus delectus rem mollitia deleniti ut alias placeat. Qui sapiente dolorem est vero nulla qui porro consequatur ex ducimus explicabo. </p>
+            <p>Est molestiae modi rem pariatur ipsum sed minima ipsa et mollitia accusamus ut dolor quia. Eos beatae repudiandae et harum dignissimos id Quis eveniet ut aliquid saepe aut optio excepturi et veritatis repellat et commodi perspiciatis! In dolor voluptatem id quidem inventore ab quisquam voluptas aut veniam dolorem. </p>
+
+
+          </div>
+        </div>
+
+        <!-- Espacio derecho -->
+        <div class="col-md-10">
+          <div class="right-container">
+            <div class="table-container" style="height: 360px; overflow-y: scroll">
+              <table class="table table-bordered table-striped">
+                <thead class="sticky-top bg-light">
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Available</th>
+                  <th>Last Login</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Loading state -->
+                <ng-container *ngIf="!isLoadingUserData; else loadingUserData">
+                  <!-- If data exist loaded, if not show empty table message -->
+                  <ng-container *ngIf="users.length > 0">
+                    <tr *ngFor="let user of users">
+                      <td>{{ user.name }}</td>
+                      <td>{{ user.age }}</td>
+                      <td>{{ user.available ? "Yes" : "False" }}</td>
+                      <td>{{ user.last_login | date : "medium" }}</td>
+                    </tr>
+                  </ng-container>
+                  <ng-template #emptyUserData>
+                    <tr>
+                      <td colspan="4" class="text-center">No user data found</td>
+                    </tr>
+                  </ng-template>
+                </ng-container>
+                <ng-template #loadingUserData>
+                  <tr>
+                    <td colspan="4" class="text-center">Loading user data...</td>
+                  </tr>
+                </ng-template>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
