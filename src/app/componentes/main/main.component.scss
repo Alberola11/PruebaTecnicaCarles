@@ -60,3 +60,11 @@
 .table-container{
   background: transparent;
 }
+.transparent-table {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.transparent-table td,
+.transparent-table th {
+  background-color: transparent;
+}
